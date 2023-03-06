@@ -1,3 +1,4 @@
+``` Python
 class Solution(object):
     def containsDuplicate(self, nums):
         """
@@ -11,3 +12,4 @@ class Solution(object):
                 return True
             hash.add(val)
         return False
+```
