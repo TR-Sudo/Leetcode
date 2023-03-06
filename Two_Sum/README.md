@@ -1,3 +1,4 @@
+``` Python
 class Solution(object):
     def twoSum(self, nums, target):
         """
@@ -20,3 +21,4 @@ class Solution(object):
                 return [cMap[arrNum],x]
             cMap[target-arrNum]=x
         return None
+```
