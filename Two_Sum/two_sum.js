@@ -1,4 +1,3 @@
-``` JavaScript
 class Solution {
     /**
      * @param {number[]} nums
@@ -24,5 +23,3 @@ class Solution {
         return null
     }
 }
-
-```
