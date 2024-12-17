@@ -1,20 +1,24 @@
-import re
+class Solution {
+    /**
+     * @param {string} s
+     * @return {boolean}
+     */
+    isPalindrome(s) {
+        // goal O(n) time and O(1)
 
-class Solution(object):
-    def isPalindrome(self, s):
-        """
-        :type s: str
-        :rtype: bool
-        """
-        splited=re.split(r'[^a-zA-Z0-9]',s)
-        combinedStr=''.join(splited).lower()
-        revStr=combinedStr[::-1].lower()
-
-        if (s.isspace()==True):
-            return True
-
-        for x in range(len(revStr)):
-            if revStr[x]!=combinedStr[x]:
-                return False
+        // lets use and array and add values from outside in using two pointers
         
-        return True
+
+        //strip all non alphanumeric values from s
+
+        
+        var str = s.replaceAll(/[^a-zA-Z0-9]/g, "").toLocaleLowerCase();
+
+        for(var x =0; x<str.length;x++){
+            if(str[x]!=str[(str.length-1)-x]){// will end on O(1) 
+                return false
+            }
+        }
+        return true
+    }
+}
